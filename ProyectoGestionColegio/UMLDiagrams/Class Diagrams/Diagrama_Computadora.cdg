@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Diagrama_Computadora">
+  <ClassDiagramComponents>
+    <Class name="Teclado" package="" visibility="public" xPosition="138.0" yPosition="91.0">
+      <Fields>
+        <Field name="nro_serie" type="String" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="marca" type="String" visibility="private"/>
+        <Field name="modelo" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Pantalla" package="" visibility="public" xPosition="407.0" yPosition="91.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="CPU" package="" visibility="public" xPosition="660.0" yPosition="93.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Mouse" package="" visibility="public" xPosition="155.0" yPosition="454.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Computadora" package="" visibility="public" xPosition="407.0" yPosition="276.0">
+      <Fields>
+        <Field name="teclado" type="Teclado" visibility="private"/>
+        <Field name="pantalla" type="Pantalla" visibility="private"/>
+        <Field name="cpu" type="CPU" visibility="private"/>
+        <Field name="mouse" type="Mouse" visibility="private"/>
+        <Field name="parlantes" type="Parlantes" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Parlantes" package="" visibility="public" xPosition="627.0" yPosition="454.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="teclado" source="Computadora" target="Teclado" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="cpu" source="Computadora" target="CPU" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="pantalla" source="Computadora" target="Pantalla" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="mouse" source="Computadora" target="Mouse" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="parlantes" source="Computadora" target="Parlantes" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

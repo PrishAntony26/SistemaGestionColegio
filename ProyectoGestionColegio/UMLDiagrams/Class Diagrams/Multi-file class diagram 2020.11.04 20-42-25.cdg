@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="Producto" package="pkg_ventas" visibility="public" xPosition="106.0" yPosition="317.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="package"/>
+        <Field name="nombre" type="String" visibility="package"/>
+        <Field name="precio" type="double" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="c"/>
+          <Argument type="String" name="n"/>
+          <Argument type="double" name="p"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPrecio" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Venta" package="pkg_ventas" visibility="public" xPosition="85.0" yPosition="27.0">
+      <Fields>
+        <Field name="nro_venta" type="int" visibility="private" isStatic="true"/>
+        <Field name="producto" type="Producto" visibility="private"/>
+        <Field name="cantidad" type="int" visibility="private"/>
+        <Field name="sub_total" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Producto" name="p"/>
+          <Argument type="int" name="c"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="appMain" package="pkg_ventas" visibility="public" xPosition="352.0" yPosition="41.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="cad"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="pkg_ventas.appMain" target="pkg_ventas.Producto" sourceCardinality="1..1" targetCardinality="1..*"/>
+    <HasRelation name="producto" source="pkg_ventas.Venta" target="pkg_ventas.Producto" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="pkg_ventas.appMain" target="pkg_ventas.Venta" sourceCardinality="1..1" targetCardinality="1..*"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
